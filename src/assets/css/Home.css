@@ -1,0 +1,52 @@
+.home {
+  background-image: url('../imgs/hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #fff;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home::before {
+  background-color: rgba(5, 13, 24, 0.3);
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.home .me {
+  position: relative;
+  z-index: 1;
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 2s;
+}
+
+.home .me h1 {
+  font-size: 64px;
+  font-weight: 700;
+ margin: 0;
+ padding: 0;
+ line-height: 1;
+}
+
+.home .me p {
+  font-size: 26px;
+  margin-bottom: 50px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+}
+
+.home .home__typing {
+  border-bottom: 3px solid var(--blue-color-one);
+  padding-bottom: 3px;
+}

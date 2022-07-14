@@ -1,0 +1,24 @@
+{
+  "Header": {
+    "Home": "Inicio",
+    "About": "Sobre mí",
+    "Technologies": "Tecnologías",
+    "Portfolio": "Portafolio",
+    "Contact": "Contáctame"
+  },
+  "Home": {
+    "Me": "Soy "
+  },
+  "About": {
+    "Title": "Sobre mí"
+  },
+  "Technologies": {
+    "Title": "Tecnologías"
+  },
+  "Portfolio": {
+    "Title": "Portafolio"
+  },
+  "Contact": {
+    "Title": "Contáctame"
+  }
+}

@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+:root {
+  --header-background: #040b14;
+  --header-color: #272829;
+  --blue-color-one: #149ddd;
+  --blue-color-two: #37b3ed;
+  --blue-color-three: #173b6c;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #272829;
 }
 
-.App-link {
-  color: #61dafb;
+section {
+  padding: 60px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+section h2 {
+  color: var(--blue-color-three);
+  font-size: 32px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  font-weight: bold;
+}
+
+section h2::after {
+  background-color: var(--blue-color-one);
+  content: '';
+  display: block;
+  height: 3px;
+  width: 50px;
+  position: absolute;
+  bottom: 0;
+}
+
+a {
+  color: var(--blue-color-one);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--blue-color-two);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.main {
+  padding: 0;
+}
+
+.main .go-top-button {
+  visibility: hidden;
+  background-color: var(--blue-color-one);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 0rem;
+  right: 1rem;
+}
+
+.main .go-top-button.visible {
+  visibility: visible;
+  bottom: 1rem;
+  transition: .25s bottom linear;
+}
+
+@media only screen and (min-width: 1200px) {
+  .main {
+    padding-left: 300px;
   }
 }

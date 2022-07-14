@@ -1,0 +1,24 @@
+{
+  "Header": {
+    "Home": "Home",
+    "About": "About",
+    "Technologies": "Technologies",
+    "Portfolio": "Portfolio",
+    "Contact": "Contact"
+  },
+  "Home": {
+    "Me": "I'm "
+  },
+  "About": {
+    "Title": "About"
+  },
+  "Technologies": {
+    "Title": "Technologies"
+  },
+  "Portfolio": {
+    "Title": "Portfolio"
+  },
+  "Contact": {
+    "Title": "Contact"
+  }
+}

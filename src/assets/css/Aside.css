@@ -54,6 +54,7 @@
 .layout-aside__profile h2 {
   color: #fff;
   font-size: 24px;
+  font-weight: 700;
 }
 
 .layout-aside__profile h2:hover {

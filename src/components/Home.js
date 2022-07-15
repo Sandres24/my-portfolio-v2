@@ -13,6 +13,7 @@ export function Home() {
       strings: ['Frontend Developer.', 'Backend Developer.'],
       typeSpeed: 100,
       backSpeed: 50,
+      backDelay: 2000,
       loop: true,
     };
 

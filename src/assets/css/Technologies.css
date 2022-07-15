@@ -1,0 +1,49 @@
+.technologies .technologies_techno-list {
+  max-width: 600px;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.technologies .technologies_techno-list .technologies__technology {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.technologies .technologies_techno-list .technologies__technology.fadeInUP {
+  animation: var(--delay) fadeInUp ease;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  70% {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.technologies .technologies_techno-list .technologies__technology img {
+  width: 100%;
+  max-width: 75px;
+  margin-bottom: .25rem;
+}
+
+.technologies .technologies_techno-list .technologies__technology small {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
+  --body-color: #272829;
   --header-background: #040b14;
   --header-color: #272829;
   --blue-color-one: #149ddd;
@@ -20,7 +21,7 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  color: #272829;
+  color: var(--body-color);
 }
 
 section {
@@ -62,6 +63,13 @@ h1, h2, h3, h4, h5, h6 {
 
 ul {
   list-style: none;
+}
+
+button {
+  background-color: transparent;
+  color: inherit;
+  font-weight: inherit;
+  border: none;
 }
 
 .main {

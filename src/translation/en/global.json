@@ -16,7 +16,10 @@
     "Title": "Technologies"
   },
   "Portfolio": {
-    "Title": "Portfolio"
+    "Title": "Portfolio",
+    "Tabs": {
+      "All": "All"
+    }
   },
   "Contact": {
     "Title": "Contact"

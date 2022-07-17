@@ -81,7 +81,7 @@ export function Aside() {
           </ul>
         </nav>
 
-        <div className='layout-aside__footer'>
+        <footer className='layout-aside__footer'>
           <div className='layout-aside__footer-languages'>
             <div className='layout-aside__footer-es language'>
               <button onClick={changeLanguageToEs}>
@@ -95,8 +95,8 @@ export function Aside() {
             </div>
           </div>
           <span>© Copyright Sergio Monsalve</span>
-          <span>2022</span>
-        </div>
+          <small>All rights reserved / 2022</small>
+        </footer>
       </header>
     </aside>
   );

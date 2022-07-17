@@ -1,0 +1,44 @@
+.portfolio .portfolio__projects ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.portfolio .portfolio__projects .portfolio__tab {
+  color: var(--body-color);
+}
+
+.portfolio .portfolio__projects .portfolio__tab.active {
+  color: var(--blue-color-one);
+  font-weight: 700;
+  border: 2px solid var(--blue-color-one);
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: -5px;
+  border-bottom-right-radius: -5px;
+  position: relative;
+}
+
+.portfolio .portfolio__projects .portfolio__tab:hover,
+.portfolio .portfolio__projects .portfolio__tab:focus {
+  color: var(--blue-color-one);
+}
+
+.portfolio .portfolio__projects .portfolio__tab.active::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -2px;
+}
+
+.portfolio .portfolio__projects .portfolio__tab button {
+  padding: .25em 1.25em;
+}
+
+.portfolio .portfolio__tabs {
+  border-top: 2px solid var(--blue-color-one);
+}

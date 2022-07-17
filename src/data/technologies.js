@@ -6,6 +6,8 @@ import nodejs from '../assets/imgs/nodejs.svg';
 import bootstrap from '../assets/imgs/bootstrap.svg';
 import redux from '../assets/imgs/redux.svg';
 import router from '../assets/imgs/react-router.svg';
+import sequelize from '../assets/imgs/sequelize.svg';
+import postgresql from '../assets/imgs/postgresql.svg';
 
 export const technologies = [
   {
@@ -39,5 +41,13 @@ export const technologies = [
   {
     technology: 'NodeJS',
     icon: nodejs,
+  },
+  {
+    technology: 'Sequelize',
+    icon: sequelize,
+  },
+  {
+    technology: 'PostgreSQL',
+    icon: postgresql,
   },
 ];

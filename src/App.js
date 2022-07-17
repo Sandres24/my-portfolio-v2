@@ -1,17 +1,18 @@
 import './App.css';
-import { Aside, Main, Footer } from './layouts';
+import { Aside, Main } from './layouts';
 import { About, Contact, Home, Portfolio, Technologies } from './components';
+
+// CSS files
+import './assets/css/Aside.css';
+import './assets/css/Home.css';
+import './assets/css/Technologies.css';
+import './assets/css/Portfolio.css';
 
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'jquery/dist/jquery.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
-// CSS files
-import './assets/css/Aside.css';
-import './assets/css/Home.css';
-import './assets/css/Technologies.css';
 
 function App() {
   return (
@@ -23,7 +24,6 @@ function App() {
         <Technologies />
         <Portfolio />
         <Contact />
-        <Footer />
       </Main>
     </div>
   );

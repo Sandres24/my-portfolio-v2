@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export function Portfolio() {
-  const [tab, setTab] = useState('all');
+  const [tab, setTab] = useState(0);
   const [t] = useTranslation('global');
 
   const handleChangeTab = (tab) => setTab(tab);
@@ -14,14 +14,15 @@ export function Portfolio() {
 
         <nav className='portfolio__projects'>
           <ul>
-            <li className={`portfolio__tab tab-link-all ${tab === 'all' ? 'active' : ''}`}>
-              <button onClick={() => handleChangeTab('all')}>{t('Portfolio.Tabs.All')}</button>
+            <div style={{ '--tab-index': `${tab * 100}%` }} className='portfolio__tab active'></div>
+            <li className='portfolio__tab tab-link-all'>
+              <button onClick={() => handleChangeTab(0)}>{t('Portfolio.Tabs.All')}</button>
             </li>
-            <li className={`portfolio__tab tab-link-react ${tab === 'react' ? 'active' : ''}`}>
-              <button onClick={() => handleChangeTab('react')}>React</button>
+            <li className='portfolio__tab tab-link-react'>
+              <button onClick={() => handleChangeTab(1)}>React</button>
             </li>
-            <li className={`portfolio__tab tab-link-nodejs ${tab === 'nodejs' ? 'active' : ''}`}>
-              <button onClick={() => handleChangeTab('nodejs')}>NodeJS</button>
+            <li className='portfolio__tab tab-link-nodejs'>
+              <button onClick={() => handleChangeTab(2)}>NodeJS</button>
             </li>
           </ul>
         </nav>

@@ -1,28 +1,44 @@
 .portfolio .portfolio__projects ul {
-  margin: 0;
+  margin: auto;
   padding: 0;
   display: flex;
+  justify-content: center;
+  width: fit-content;
+  position: relative;
 }
 
 .portfolio .portfolio__projects .portfolio__tab {
   color: var(--body-color);
+  text-align: center;
+  width: 100px;
+  transition: .5s all linear;
 }
 
 .portfolio .portfolio__projects .portfolio__tab.active {
-  color: var(--blue-color-one);
-  font-weight: 700;
+  width: 100px;
   border: 2px solid var(--blue-color-one);
   border-bottom: none;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: -5px;
   border-bottom-right-radius: -5px;
-  position: relative;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(var(--tab-index));
+  transition: .5s all linear;
+}
+
+.portfolio .portfolio__projects .portfolio__tab ~ .active {
+  color: var(--blue-color-one);
+  font-weight: 700;
 }
 
 .portfolio .portfolio__projects .portfolio__tab:hover,
 .portfolio .portfolio__projects .portfolio__tab:focus {
   color: var(--blue-color-one);
+  transition: .5s all linear, .25s color;
 }
 
 .portfolio .portfolio__projects .portfolio__tab.active::before {

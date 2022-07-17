@@ -12,7 +12,11 @@ export function Technologies() {
     <section id='technologies' className='technologies'>
       <div className='container'>
         <h2>{t('Technologies.Title')}</h2>
-        <div ref={elementRef} className={`technologies_techno-list`}>
+        <div
+          ref={elementRef}
+          style={{ opacity: `${isOnScreen ? '1' : '0'}` }}
+          className={`technologies_techno-list`}
+        >
           {technologies.map((technology, index) => (
             <div
               key={index}

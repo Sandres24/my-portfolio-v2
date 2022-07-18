@@ -22,6 +22,7 @@
   background-color: var(--header-background);
   color: var(--header-color);
   width: 300px;
+  height: 100vh;
   padding: 0 15px;
   position: fixed;
   top: 0;

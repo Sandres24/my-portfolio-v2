@@ -2,9 +2,12 @@
 
 :root {
   --body-color: #272829;
+  --section-background-color: #f5f8fd;
   --header-background: #040b14;
   --header-color: #272829;
   --blue-color-one: #149ddd;
+  --blue-color-one-rgba-one: rgba(20, 157, 221, 0.75);
+  --blue-color-one-rgba-two: rgba(20, 157, 221, 0.95);
   --blue-color-two: #37b3ed;
   --blue-color-three: #173b6c;
 }
@@ -26,6 +29,10 @@ body {
 
 section {
   padding: 60px 0;
+}
+
+section:nth-child(even) {
+  background-color: var(--section-background-color);
 }
 
 section h2 {

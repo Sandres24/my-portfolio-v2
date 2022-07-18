@@ -11,7 +11,6 @@
   color: var(--body-color);
   text-align: center;
   width: 100px;
-  transition: .5s all linear;
 }
 
 .portfolio .portfolio__projects .portfolio__tab.active {
@@ -30,15 +29,15 @@
   transition: .5s all linear;
 }
 
-.portfolio .portfolio__projects .portfolio__tab ~ .active {
+.portfolio .portfolio__projects .portfolio__tab.tab-active {
   color: var(--blue-color-one);
   font-weight: 700;
+  transition-delay: .5s;
 }
 
-.portfolio .portfolio__projects .portfolio__tab:hover,
-.portfolio .portfolio__projects .portfolio__tab:focus {
+.portfolio .portfolio__projects .portfolio__tab.tab-link:hover,
+.portfolio .portfolio__projects .portfolio__tab.tab-link:focus {
   color: var(--blue-color-one);
-  transition: .5s all linear, .25s color;
 }
 
 .portfolio .portfolio__projects .portfolio__tab.active::before {
@@ -57,4 +56,123 @@
 
 .portfolio .portfolio__tabs {
   border-top: 2px solid var(--blue-color-one);
+}
+
+.portfolio .portfolio__tabs .portfolio__tab-content {
+  margin-top: 2rem;
+}
+
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card {
+  padding: 0 12px;
+  margin-bottom: 30px;
+}
+
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card__content {
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card__content::before {
+  background: rgba(255, 255, 255, 0.5);
+  display: block;
+  opacity: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transition: 0.3s all ease-in-out;
+}
+
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card:hover .project-card__content::before,
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card:focus .project-card__content::before {
+  opacity: 1;
+}
+
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card__content .project-card__header,
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card__content .project-card__footer {
+  background: var(--blue-color-one-rgba-one);
+}
+
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card__content .project-card__header {
+  color: #fff;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+  transition: 0.3s all ease-in-out;
+  z-index: 2;
+}
+
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card__content .project-card__header:hover {
+  background: red;
+}
+
+.portfolio__tab-content .project-card__content .project-card__header .project-card__technologies {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card__content .project-card__header h3 {
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card__content .project-card__header img {
+  width: 30px;
+}
+
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card__content .project-card__footer {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  transition: 0.3s all ease-in-out;
+  z-index: 20;
+}
+
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card__content .project-card__footer a {
+  display: block;
+  text-align: center;
+  width: 100%;
+  transition: 0.3s all ease-in-out;
+}
+
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card__content .project-card__footer a:hover,
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card__content .project-card__footer a:focus {
+  background: var(--blue-color-one-rgba-two);
+}
+
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card__content .project-card__footer a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card:hover .project-card__header ,
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card:focus .project-card__header {
+  background: var(--blue-color-one-rgba-one);
+  transform: translateY(0);
+}
+
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card:hover .project-card__footer ,
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card:focus .project-card__footer {
+  background: var(--blue-color-one-rgba-one);
+  transform: translateY(0);
+}
+
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card__content img {
+  width: 100%;
 }

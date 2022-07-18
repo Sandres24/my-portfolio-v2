@@ -8,6 +8,12 @@ export function Aside() {
   const [t, i18n] = useTranslation('global');
   const [isActive, setIsActive] = useState(false);
 
+  /* if (isActive) {
+    document.body.style.overflowY = 'hidden';
+  } else {
+    document.body.style.overflowY = 'auto';
+  } */
+
   const changeIsActive = () => setIsActive(!isActive);
   const changeLanguageToEs = () => i18n.changeLanguage('es');
   const changeLanguageToEn = () => i18n.changeLanguage('en');

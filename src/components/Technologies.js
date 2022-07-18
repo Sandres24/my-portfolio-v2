@@ -6,7 +6,7 @@ import { useIsOnScreen } from '../hooks';
 export function Technologies() {
   const [t] = useTranslation('global');
   const { elementRef, isOnScreen } = useIsOnScreen({ once: true });
-  const delay = 500;
+  const delay = 100;
 
   return (
     <section id='technologies' className='technologies'>

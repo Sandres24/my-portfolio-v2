@@ -1,6 +1,15 @@
+import { motion } from 'framer-motion';
+
 export function ProjectCard({ project }) {
   return (
-    <div tabIndex={0} className='project-card col-lg-4 col-md-6'>
+    <motion.div
+      layout
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      tabIndex={0}
+      className='project-card col-lg-4 col-md-6'
+    >
       <div className='project-card__content'>
         <div className='project-card__header'>
           <h3>{project.name}</h3>
@@ -20,6 +29,6 @@ export function ProjectCard({ project }) {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

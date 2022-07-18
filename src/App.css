@@ -84,8 +84,8 @@ button {
 }
 
 .main .go-top-button {
-  visibility: hidden;
   background-color: var(--blue-color-one);
+  visibility: hidden;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -98,8 +98,10 @@ button {
 
 .main .go-top-button.visible {
   visibility: visible;
+  outline: 1px solid #fff;
   bottom: 1rem;
   transition: .25s bottom linear;
+  z-index: 9997;
 }
 
 @media only screen and (min-width: 1200px) {

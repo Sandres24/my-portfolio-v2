@@ -150,6 +150,7 @@
 .portfolio .portfolio__tabs .portfolio__tab-content .project-card__content .project-card__footer {
   width: 100%;
   display: flex;
+  justify-content: flex-end;
   position: absolute;
   bottom: 0;
   transform: translateY(100%);
@@ -160,7 +161,7 @@
 .portfolio .portfolio__tabs .portfolio__tab-content .project-card__content .project-card__footer a {
   display: block;
   text-align: center;
-  width: 100%;
+  width: 50%;
   transition: 0.3s all ease-in-out;
 }
 

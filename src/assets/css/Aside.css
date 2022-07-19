@@ -22,7 +22,6 @@
   background-color: var(--header-background);
   color: var(--header-color);
   width: 300px;
-  height: 100vh;
   padding: 0 15px;
   position: fixed;
   top: 0;
@@ -82,9 +81,9 @@
   transition: 0.3s;
 }
 
-.layout-aside__profile-social a:hover,
-.layout-aside__profile-social a:focus {
+.layout-aside__profile-social a:hover {
   background: var(--blue-color-one);
+  color: #fff;
 }
 
 .layout-aside__navigation {
@@ -123,26 +122,24 @@
   font-size: 24px;
 }
 
-.layout-aside__navigation ul a:focus *,
-.layout-aside__navigation ul a:hover * {
+.layout-aside__navigation ul li a:hover * {
   transition: .3s;
 }
 
-.layout-aside__navigation ul li.active i,
-.layout-aside__navigation ul a:focus i,
+.layout-aside__navigation ul a.active i,
 .layout-aside__navigation ul a:hover i {
   color: var(--blue-color-one);
 }
 
-.layout-aside__navigation ul li.active span,
-.layout-aside__navigation ul a:focus span,
+.layout-aside__navigation ul a.active span,
 .layout-aside__navigation ul a:hover span {
   color: #fff;
 }
 
-.layout-aside__navigation ul a {
+.layout-aside__navigation ul li a {
   text-decoration: none;
-  color: #a8a9b4;
+  color: #a8a9b4 !important;
+  cursor: pointer;
 }
 
 .layout-aside__footer {

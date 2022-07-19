@@ -9,6 +9,7 @@ import RickAndMortyWiki from '../assets/imgs/RickAndMortyWiki.png';
 import CRUD from '../assets/imgs/CRUD.png';
 import Pokedex from '../assets/imgs/Pokedex.png';
 import Ecommerce from '../assets/imgs/Ecommerce.png';
+import AcademloMeals from '../assets/imgs/AcademloMeals.PNG';
 
 export const projects = [
   {
@@ -50,7 +51,7 @@ export const projects = [
   {
     id: 5,
     name: 'Academlo meals',
-    image: RickAndMortyWiki,
+    image: AcademloMeals,
     category: 2,
     technologies: [nodejs, sequelize, postgresql],
     urlApp: '',

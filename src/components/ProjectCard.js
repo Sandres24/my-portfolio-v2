@@ -21,12 +21,16 @@ export function ProjectCard({ project }) {
         </div>
         <img src={project.image} alt='Project preview' className='img-fluid' />
         <div className='project-card__footer'>
-          <a href={project.urlApp} target='__blanck' rel='noopener noreferrer'>
-            <i className='bi bi-link-45deg'></i>
-          </a>
-          <a href={project.urlRepository} target='__blanck' rel='noopener noreferrer'>
-            <i className='bi bi-github'></i>
-          </a>
+          {project.urlApp && (
+            <a href={project.urlApp} target='__blanck' rel='noopener noreferrer'>
+              <i className='bi bi-link-45deg'></i>
+            </a>
+          )}
+          {project.urlRepository && (
+            <a href={project.urlRepository} target='__blanck' rel='noopener noreferrer'>
+              <i className='bi bi-github'></i>
+            </a>
+          )}
         </div>
       </div>
     </motion.div>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 import avatar from '../assets/imgs/sergio-profile-img.jpg';
 import es_icon from '../assets/icons/translate_es.png';
@@ -8,13 +9,16 @@ export function Aside() {
   const [t, i18n] = useTranslation('global');
   const [isActive, setIsActive] = useState(false);
 
-  /* if (isActive) {
+  if (isActive) {
     document.body.style.overflowY = 'hidden';
   } else {
     document.body.style.overflowY = 'auto';
-  } */
+  }
 
   const changeIsActive = () => setIsActive(!isActive);
+  const handleClick = () => {
+    if (isActive) changeIsActive();
+  };
   const changeLanguageToEs = () => i18n.changeLanguage('es');
   const changeLanguageToEn = () => i18n.changeLanguage('en');
 
@@ -40,49 +44,56 @@ export function Aside() {
           <img src={avatar} alt='Sergio avatar' />
           <h2>Sergio Monsalve</h2>
           <div className='layout-aside__profile-social'>
-            <a href='https://www.google.com' className='linkedin'>
+            <a
+              href='https://www.linkedin.com/in/sergiomonsalve-sandres'
+              target='__blanck'
+              rel='noopener noreferrer'
+              className='linkedin'
+            >
               <i className='bi bi-linkedin'></i>
             </a>
-            <a href='https://www.google.com' className='github'>
+            <a
+              href='https://github.com/Sandres24'
+              target='__blanck'
+              rel='noopener noreferrer'
+              className='github'
+            >
               <i className='bi bi-github'></i>
-            </a>
-            <a href='https://www.google.com' className='whatsapp'>
-              <i className='bi bi-whatsapp'></i>
             </a>
           </div>
         </div>
 
         <nav className='layout-aside__navigation'>
           <ul>
-            <li className='layout-aside__navigation-home active'>
-              <a href='#home' onClick={changeIsActive}>
+            <li className='layout-aside__navigation-home'>
+              <Link to='home' spy={true} activeClass='active' onClick={handleClick}>
                 <i className='bi bi-house'></i>
                 <span>{t('Header.Home')}</span>
-              </a>
+              </Link>
             </li>
             <li className='layout-aside__navigation-about'>
-              <a href='#about' onClick={changeIsActive}>
+              <Link to='about' spy={true} activeClass='active' onClick={handleClick}>
                 <i className='bi bi-person'></i>
                 <span>{t('Header.About')}</span>
-              </a>
+              </Link>
             </li>
             <li className='layout-aside__navigation-technologies'>
-              <a href='#technologies' onClick={changeIsActive}>
+              <Link to='technologies' spy={true} activeClass='active' onClick={handleClick}>
                 <i className='bi bi-code-square'></i>
                 <span>{t('Header.Technologies')}</span>
-              </a>
+              </Link>
             </li>
             <li className='layout-aside__navigation-portfolio'>
-              <a href='#portfolio' onClick={changeIsActive}>
+              <Link to='portfolio' spy={true} activeClass='active' onClick={handleClick}>
                 <i className='bi bi-window-sidebar'></i>
                 <span>{t('Header.Portfolio')}</span>
-              </a>
+              </Link>
             </li>
             <li className='layout-aside__navigation-contact'>
-              <a href='#contact' onClick={changeIsActive}>
+              <Link to='contact' spy={true} activeClass='active' onClick={handleClick}>
                 <i className='bi bi-envelope'></i>
                 <span>{t('Header.Contact')}</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

@@ -45,10 +45,6 @@ export function Contact() {
   };
 
   useEffect(() => {
-    toast.success(t('Contact.Message.Success'), {
-      duration: 4000,
-    });
-
     if (isOnScreen) {
       formControl.current.start({
         opacity: 1,

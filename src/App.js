@@ -1,6 +1,7 @@
-import './App.css';
-import { Aside, Main } from './layouts';
+import { Toaster } from 'react-hot-toast';
 import { About, Contact, Footer, Home, Portfolio, Technologies } from './components';
+import { Aside, Main } from './layouts';
+import './App.css';
 
 // CSS files
 import './assets/css/Aside.css';
@@ -17,6 +18,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 function App() {
   return (
     <div className='App'>
+      <Toaster position='bottom-center' containerClassName='toaster' />
       <Aside />
       <Home />
       <Main>
@@ -24,8 +26,8 @@ function App() {
         <Technologies />
         <Portfolio />
         <Contact />
-        <Footer />
       </Main>
+      <Footer />
     </div>
   );
 }

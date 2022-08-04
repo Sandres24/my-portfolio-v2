@@ -107,4 +107,8 @@ button {
   .main {
     padding-left: 300px;
   }
+
+  .App .toaster {
+    left: 316px !important;
+  }
 }

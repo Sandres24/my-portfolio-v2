@@ -1,3 +1,4 @@
+import { toast } from 'react-hot-toast';
 import { useEffect, useRef, useState } from 'react';
 import { motion, useAnimationControls } from 'framer-motion';
 import emailjs from '@emailjs/browser';
@@ -9,7 +10,6 @@ export function Contact() {
   const { elementRef, isOnScreen } = useIsOnScreen({ once: true, threshold: 0.5 });
   const [t] = useTranslation('global');
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState(null);
 
   const formControl = useRef(useAnimationControls());
 
@@ -28,29 +28,27 @@ export function Contact() {
       .then(() => {
         e.target.reset();
 
-        setMessage({
-          type: 'success',
-          msg: t('Contact.Message.Success'),
+        toast.success(t('Contact.Message.Success'), {
+          duration: 4000,
         });
       })
       .catch((err) => {
         console.error(err);
 
-        setMessage({
-          type: 'error',
-          msg: t('Contact.Message.Error'),
+        toast.error(t('Contact.Message.Error'), {
+          duration: 4000,
         });
       })
       .finally(() => {
         setLoading(false);
-
-        setTimeout(() => {
-          setMessage(null);
-        }, 3000);
       });
   };
 
   useEffect(() => {
+    toast.success(t('Contact.Message.Success'), {
+      duration: 4000,
+    });
+
     if (isOnScreen) {
       formControl.current.start({
         opacity: 1,
@@ -126,7 +124,6 @@ export function Contact() {
               ></textarea>
             </div>
           </div>
-          {message && <div className={`contact-form-message ${message.type}`}>{message.msg}</div>}
           <div className='row submit-form-section'>
             <button type='submit' className='submit-form-button' disabled={loading}>
               {loading ? t('Contact.Loading') : t('Contact.Labels.Send')}

@@ -143,6 +143,7 @@
 }
 
 .layout-aside__footer {
+  visibility: hidden;
   width: 300px;
   padding: 0 15px;
   color: #fff;
@@ -189,6 +190,10 @@
   .layout-aside__header {
     left: 0;
     transition: .5s ease-in;
+  }
+
+  .layout-aside__footer {
+    visibility: visible;
   }
 
   .layout-aside .languages {

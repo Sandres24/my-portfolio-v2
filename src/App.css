@@ -98,7 +98,6 @@ button {
 
 .main .go-top-button.visible {
   visibility: visible;
-  outline: 1px solid #fff;
   bottom: 1rem;
   transition: .25s bottom linear;
   z-index: 9997;

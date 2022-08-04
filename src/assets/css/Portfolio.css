@@ -35,8 +35,7 @@
   transition-delay: .5s;
 }
 
-.portfolio .portfolio__projects .portfolio__tab.tab-link:hover,
-.portfolio .portfolio__projects .portfolio__tab.tab-link:focus {
+.portfolio .portfolio__projects .portfolio__tab.tab-link:hover {
   color: var(--blue-color-one);
 }
 
@@ -62,14 +61,14 @@
   margin-top: 2rem;
 }
 
-.portfolio .portfolio__tabs .portfolio__tab-content.fadeInDown {
-  animation: fadeInDown 1s ease-in-out;
+.portfolio .portfolio__tabs .portfolio__tab-content.fadeInUp2 {
+  animation: fadeInUp2 .75s ease-in-out;
 }
 
-@keyframes fadeInDown {
+@keyframes fadeInUp2 {
   from {
     opacity: 0;
-    transform: translateY(-10%);
+    transform: translateY(10%);
   }
   to {
     opacity: 1;
@@ -102,8 +101,7 @@
   transition: 0.3s all ease-in-out;
 }
 
-.portfolio .portfolio__tabs .portfolio__tab-content .project-card:hover .project-card__content::before,
-.portfolio .portfolio__tabs .portfolio__tab-content .project-card:focus .project-card__content::before {
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card:hover .project-card__content::before {
   opacity: 1;
 }
 
@@ -165,8 +163,7 @@
   transition: 0.3s all ease-in-out;
 }
 
-.portfolio .portfolio__tabs .portfolio__tab-content .project-card__content .project-card__footer a:hover,
-.portfolio .portfolio__tabs .portfolio__tab-content .project-card__content .project-card__footer a:focus {
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card__content .project-card__footer a:hover {
   background: var(--blue-color-one-rgba-two);
 }
 
@@ -177,14 +174,12 @@
   text-decoration: none;
 }
 
-.portfolio .portfolio__tabs .portfolio__tab-content .project-card:hover .project-card__header ,
-.portfolio .portfolio__tabs .portfolio__tab-content .project-card:focus .project-card__header {
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card:hover .project-card__header {
   background: var(--blue-color-one-rgba-one);
   transform: translateY(0);
 }
 
-.portfolio .portfolio__tabs .portfolio__tab-content .project-card:hover .project-card__footer ,
-.portfolio .portfolio__tabs .portfolio__tab-content .project-card:focus .project-card__footer {
+.portfolio .portfolio__tabs .portfolio__tab-content .project-card:hover .project-card__footer {
   background: var(--blue-color-one-rgba-one);
   transform: translateY(0);
 }

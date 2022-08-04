@@ -90,7 +90,7 @@ export function Aside() {
               </Link>
             </li>
             <li className='layout-aside__navigation-contact'>
-              <Link to='contact' spy={true} activeClass='active' onClick={handleClick}>
+              <Link to='contact' spy={true} offset={15} activeClass='active' onClick={handleClick}>
                 <i className='bi bi-envelope'></i>
                 <span>{t('Header.Contact')}</span>
               </Link>
@@ -111,8 +111,10 @@ export function Aside() {
               </button>
             </div>
           </div>
-          <span>© Copyright Sergio Monsalve</span>
-          <small>All rights reserved / 2022</small>
+          <span className='mb-1'>
+            © Copyright <strong>Sergio Monsalve</strong>
+          </span>
+          <small>All rights reserved 2022</small>
         </footer>
       </header>
     </aside>

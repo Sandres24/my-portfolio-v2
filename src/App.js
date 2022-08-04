@@ -1,6 +1,6 @@
 import './App.css';
 import { Aside, Main } from './layouts';
-import { About, Contact, Home, Portfolio, Technologies } from './components';
+import { About, Contact, Footer, Home, Portfolio, Technologies } from './components';
 
 // CSS files
 import './assets/css/Aside.css';
@@ -24,6 +24,7 @@ function App() {
         <Technologies />
         <Portfolio />
         <Contact />
+        <Footer />
       </Main>
     </div>
   );

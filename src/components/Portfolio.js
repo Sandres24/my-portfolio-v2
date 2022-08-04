@@ -5,18 +5,20 @@ import { ProjectCard } from './ProjectCard';
 import { projects } from '../data/projects';
 import { useIsOnScreen } from '../hooks';
 
+const sortedProjects = projects.sort(() => 0.5 - Math.random());
+
 export function Portfolio() {
   const [tab, setTab] = useState(0);
-  const [myProjects, setMyProjects] = useState(projects);
+  const [myProjects, setMyProjects] = useState(sortedProjects);
   const [t] = useTranslation('global');
-  const { elementRef, isOnScreen } = useIsOnScreen({ once: true });
+  const { elementRef, isOnScreen } = useIsOnScreen({ once: true, threshold: 0.2 });
 
   const handleChangeTab = (tab) => {
     setTab(tab);
     if (tab === 0) {
-      setMyProjects(projects);
+      setMyProjects(sortedProjects);
     } else {
-      const filteredProjects = projects
+      const filteredProjects = sortedProjects
         .filter((project) => project.category === tab)
         .sort(() => 0.5 - Math.random());
       setMyProjects(filteredProjects);
@@ -47,7 +49,7 @@ export function Portfolio() {
           <motion.div
             layout
             style={{ opacity: `${isOnScreen ? '1' : 0}` }}
-            className={`portfolio__tab-content row ${isOnScreen ? 'fadeInDown' : ''}`}
+            className={`portfolio__tab-content row ${isOnScreen ? 'fadeInUp2' : ''}`}
           >
             <AnimatePresence>
               {myProjects.map((project) => (

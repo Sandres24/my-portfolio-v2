@@ -22,6 +22,18 @@
     }
   },
   "Contact": {
-    "Title": "Contáctame"
+    "Title": "Contáctame",
+    "Labels": {
+      "Name": "Nombre",
+      "Email": "Correo",
+      "Subject": "Asunto",
+      "Message": "Mensaje",
+      "Send": "Enviar"
+    },
+    "Loading": "Enviando...",
+    "Message": {
+      "Success": "He recibido tu mensaje, pronto responderé",
+      "Error": "Ha ocurrido un error, por favor intenta nuevamente."
+    }
   }
 }

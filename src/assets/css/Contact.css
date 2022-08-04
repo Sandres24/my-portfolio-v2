@@ -1,0 +1,52 @@
+.contact {
+  margin-bottom: 130px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact .contact-form textarea {
+  resize: none;
+}
+
+.contact .contact-form .form-input-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact .contact-form .submit-form-section {
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact .contact-form .contact-form-message {
+  font-size: .9rem;
+  text-align: center;
+  width: fit-content;
+  position: absolute;
+  left: 50%;
+  bottom: 17%;
+  transform: translateX(-50%);
+}
+
+.contact .contact-form .contact-form-message.success {
+  color: green;
+}
+
+.contact .contact-form .contact-form-message.error {
+  color: #d10000;
+}
+
+.contact .contact-form .submit-form-button {
+  background: var(--blue-color-one);
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  width: 155px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 4px;
+  transition: background .5s ease;
+}
+
+.contact .contact-form .submit-form-button:hover {
+  background: var(--blue-color-two);
+}

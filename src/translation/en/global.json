@@ -22,6 +22,18 @@
     }
   },
   "Contact": {
-    "Title": "Contact"
+    "Title": "Contact",
+    "Labels": {
+      "Name": "Name",
+      "Email": "Email",
+      "Subject": "Subject",
+      "Message": "Message",
+      "Send": "Send"
+    },
+    "Loading": "Sending...",
+    "Message": {
+      "Success": "I have received your message, I will reply soon",
+      "Error": "An error has occurred, please try again."
+    }
   }
 }

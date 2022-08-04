@@ -10,6 +10,7 @@ import CRUD from '../assets/imgs/CRUD.png';
 import Pokedex from '../assets/imgs/Pokedex.png';
 import Ecommerce from '../assets/imgs/Ecommerce.png';
 import AcademloMeals from '../assets/imgs/AcademloMeals.PNG';
+import AcademloStore from '../assets/imgs/AcademloStore.png';
 
 export const projects = [
   {
@@ -50,11 +51,20 @@ export const projects = [
   },
   {
     id: 5,
-    name: 'Academlo meals',
+    name: 'Academlo Meals',
     image: AcademloMeals,
     category: 2,
     technologies: [nodejs, sequelize, postgresql],
     urlApp: '',
     urlRepository: 'https://github.com/Sandres24/academlo_meals_app.git',
+  },
+  {
+    id: 6,
+    name: 'Academlo Store',
+    image: AcademloStore,
+    category: 2,
+    technologies: [nodejs, sequelize, postgresql],
+    urlApp: '',
+    urlRepository: 'https://github.com/Sandres24/academlo_store_app.git',
   },
 ];

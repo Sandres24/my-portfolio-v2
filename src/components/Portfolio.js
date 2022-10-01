@@ -5,20 +5,18 @@ import { ProjectCard } from './ProjectCard';
 import { projects } from '../data/projects';
 import { useIsOnScreen } from '../hooks';
 
-const sortedProjects = projects.sort(() => 0.5 - Math.random());
-
 export function Portfolio() {
   const [tab, setTab] = useState(0);
-  const [myProjects, setMyProjects] = useState(sortedProjects);
+  const [myProjects, setMyProjects] = useState(projects);
   const [t] = useTranslation('global');
   const { elementRef, isOnScreen } = useIsOnScreen({ once: true, threshold: 0.2 });
 
   const handleChangeTab = (tab) => {
     setTab(tab);
     if (tab === 0) {
-      setMyProjects(sortedProjects);
+      setMyProjects(projects);
     } else {
-      const filteredProjects = sortedProjects
+      const filteredProjects = projects
         .filter((project) => project.category === tab)
         .sort(() => 0.5 - Math.random());
       setMyProjects(filteredProjects);

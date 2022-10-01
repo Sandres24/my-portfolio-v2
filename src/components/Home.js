@@ -1,7 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 import Typed from 'typed.js';
 import 'animate.css';
+
+import sergioCvSpanish from '../assets/docs/Sergio Monsalve CV Spanish.pdf';
+import sergioCvEnglish from '../assets/docs/Sergio Monsalve CV English.pdf';
 
 export function Home() {
   const [t] = useTranslation('global');
@@ -30,6 +34,15 @@ export function Home() {
           <span>{t('Home.Me')}</span>
           <span ref={typedElementRef} className='home__typing'></span>
         </p>
+        <button className='home__download-cv'>
+          <a
+            href={i18next.language === 'es' ? sergioCvSpanish : sergioCvEnglish}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            {t('Home.Download')}
+          </a>
+        </button>
       </div>
     </div>
   );

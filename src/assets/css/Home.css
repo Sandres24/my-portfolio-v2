@@ -244,6 +244,10 @@
 }
 
 @media (min-width: 768px) {
+  .home .home__download-cv {
+    align-self: flex-end;
+  }
+
   .home .home__download-cv,
   .home .home__download-cv:after {
     padding: 1em 2em;
